@@ -1,0 +1,111 @@
+<html lang="es">
+<head>
+<title>Modelos Numericos</title>
+<meta charset="UTF-8">
+ {% load static %}
+<link rel="stylesheet" href="{% static 'modelos/css/climato.css' %}">
+<link rel="stylesheet" href="{% static 'nubes/css/rayitos.css' %}">
+<link rel="stylesheet" href="{% static 'nubes/cumulus/styles.css' %}">
+<link rel="icon" href="{% static 'modelos/imagen/mt.ico' %}">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="launch()">
+<header class="header">
+ <div class="header-fixed">
+
+   <div class="h-menu-inner">
+     <div class="h-menu2 wancho">
+       <div class="h-cnt-items">
+         <div class="-head-info">
+            <a class="h-item" href="{% static 'modelos/instrumentos/' %}" target="_blank">Aprende con Cimetclim</a>
+            <a class="h-item" href="{% static 'modelos/cambio-climatico/' %}" target="_blank">Cambio Climático</a>
+            <a class="h-item" href="{% static 'modelos/operaciones/' %}" target="_blank">Productos y Servicios</a>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="h-inner">
+     <div class="header-bloque wancho">
+       <div class="wancho header-ctn clearfix">
+         <a href="{% url 'principal' %}" class="header-logo"><img src="{% static 'nubes/img/header-logo.png' %}" alt="" width="226" height="56"></a>
+         <nav class="menu">
+           <div class="menu-wrap">
+             <ul class="menu-list">
+               <li class="menu-item  "><a href="{% url 'principal' %}" class="menu-link"><span class="primero"><i class="icon icon-home"></i></span>Inicio</a></li>
+               <li class="menu-item "><a href="{% url 'principal' %}" class="menu-link"><span class="segundo"><i class="icon icon-globe"></i></span>Nosotros</a></li>
+               <li class="menu-item "><a href="{% url 'satelital' %}" class="menu-link"><span class="tercero"><i class="icon icon-satelite"></i></span>Imágenes Satelitales</a></li>
+               <li class="menu-item "><a href="{% url 'modelos' %}" class="menu-link"><span class="cuarto"><i class="icon icon-align-right"></i></span>Modelos Numéricos</a></li>
+               <li class="menu-item "><a href="" class="menu-link"><span class="quinto"><i class="icon icon-align-right"></i></span>Estaciones</a></li>
+             </ul>
+           </div>
+         </nav>
+       </div>
+     </div>
+   </div>
+ </div>
+
+</header>
+
+   <script src="{% static 'modelos/js/climato.js' %}"></script>
+
+  <center>
+       <table>
+          <tbody>
+                <tr class="media">
+                    <td align="center">
+                         <div class="var" align="left" >
+
+                           <h2 align="center" style="color:#FA7C0C;">Climatolog&iacute;a:</h2>
+
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='red'" href="#"><img src="{% static 'modelos/imagen/sol.png' %}" alt="">  Presión Atmosférica</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='red'" href="#"><img src="{% static 'modelos/imagen/sol.png' %}" alt="">  Corriente en Chorro</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='red'" href="#"><img src="{% static 'modelos/imagen/sol.png' %}" alt="">  Temperatura m&iacute;nima</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='red'" href="#"><img src="{% static 'modelos/imagen/sol.png' %}" alt="">  Temperatura m&aacute;xima </a>
+                        </div>
+                        <br>
+                        <div class="var" align="left">
+                        <h2 align="center" style="color:#0C80DD;">Pron&oacute;sticos:</h2>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='blue'" href="#"><img src="{% static 'modelos/imagen/nube.png' %}" alt="">  Presión Atmosférica</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='blue'" href="#"><img src="{% static 'modelos/imagen/nube.png' %}" alt="">  Advecci&oacute;n de Temperatura</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='blue'" href="#"><img src="{% static 'modelos/imagen/nube.png' %}" alt="">  L&iacute;nea de Corriente 850hPa</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='blue'" href="#"><img src="{% static 'modelos/imagen/nube.png' %}" alt="">  L&iacute;nea de Corriente 500hPa</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='blue'" href="#"><img src="{% static 'modelos/imagen/nube.png' %}" alt="">  L&iacute;nea de Corriente 250hPa</a>
+<br>
+<a onmouseout="this.style.color='black'" onmouseover="this.style.color='blue'" href="#"><img src="{% static 'modelos/imagen/nube.png' %}" alt="">  Frentes</a>
+
+                      </div>
+
+                        <br>
+
+                    <div class="ne">
+                       <a href="JavaScript: func()" onClick="decrementImage(--current_image)"><img src="{% static 'modelos/previous.ico' %}" alt=""></a>
+ 					             <a href="JavaScript: func()" onClick="incrementImage(++current_image)"><img src="{% static 'modelos/next.ico' %}" alt=""></a>
+                        					  <form method="POST" name="control_form">
+
+                                      <br>
+                           <h3>Meses:</h3>
+                            <input type="text" name="frame_nr" value="9" size="5" onFocus="this.select()" onChange="go2image(this.value)">
+ 						                         </form>
+                                     <br>
+                      <img src="{% static 'modelos/kawai.png' %}" alt="" width="120" height="150">
+                    </div>
+                  </td>
+                   <td width="700" align="CENTER" valign="top" bgcolor="#FFFFFF">
+                      <img name="animation" border="0" src="12.png" alt="satellite image"></td>
+               </tr>
+             </tbody>
+      </table>
+
+  <br />
+
+   </center>
+</body>
+</html>

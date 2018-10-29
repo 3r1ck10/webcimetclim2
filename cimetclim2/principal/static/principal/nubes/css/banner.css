@@ -1,0 +1,60 @@
+/*ubicacion del banner*/
+
+.contentisimo{ margin: 15px auto; padding: 0px 20px; max-width: 960px; }
+
+.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -10px; }
+.column, .columns { float: left; min-height: 1px; padding: 0 10px; position: absolute; }
+
+/*para colores que contiene el puntos negro movible*/
+.ls-bottom-slidebuttons { background: #1bc4de; }
+
+.ls-bottom-slidebuttons a, /*puntos blancos*/
+.nivo-controlNav a /*para movimiento a la derecha*/
+{ background-color: #fff; }
+
+/*color y movimiento del punto negro*/
+.ls-bottom-slidebuttons
+a.ls-nav-active,
+.ls-bottom-slidebuttons
+a:hover.flex-control-nav
+ul a:hover { background: #000; }
+
+/*flechas para cambiar las imagenes*/
+.ls-bluediamond
+.ls-nav-prev,
+.ls-bluediamond
+.ls-nav-next,
+.arrow.forward{ background-color: #1bc4de; }
+.ls-layer,
+.papita {
+	position: absolute;
+	display: none;
+	background-position: center center;
+	overflow: hidden;
+}
+/*visualizacion de las imagenes*/
+.ls-active,
+.ls-animating {
+	display: block !important;
+}
+.ls-shadow {
+	display: none;
+	position: absolute;
+	z-index: 20;
+	top: 100%;
+	width: 100%;
+	left: 0px;
+	overflow: hidden;
+	visibility: hidden;
+}
+.contentisimo:after {
+  content: "";
+  background: url("../img/rayitalinda.png") top center no-repeat;
+  position: absolute;
+  margin: 100px;
+  bottom: 60px;
+	left:70px;
+  height: 7px;
+  width: 960px;
+  z-index: 53;
+}

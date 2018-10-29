@@ -1,0 +1,93 @@
+<html lang="es">
+<head>
+<title>Modelos Numericos</title>
+<meta charset="UTF-8">
+   {% load static %}
+<link rel="stylesheet" href="{% static 'css/climato.css' %}">
+<link rel="stylesheet" href="{% static 'nubes/css/rayitos.css' %}">
+<link rel="stylesheet" href="{% static 'nubes/cumulus/styles.css' %}">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="launch()">
+<header class="header">
+ <div class="header-fixed">
+
+   <div class="h-menu-inner">
+     <div class="h-menu2 wancho">
+       <div class="h-cnt-items">
+         <div class="-head-info">
+            <a class="h-item" href="/instrumentos/" target="_blank">Aprende con Cimetclim</a>
+            <a class="h-item" href="/cambio-climatico/" target="_blank">Cambio Climático</a>
+            <a class="h-item" href="/operaciones/" target="_blank">Productos y Servicios</a>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="h-inner">
+     <div class="header-bloque wancho">
+       <div class="wancho header-ctn clearfix">
+         <a href="{% url 'principal' %}" class="header-logo"><img src="{% static 'nubes/img/header-logo.png' %}" alt="" width="226" height="56"></a>
+         <nav class="menu">
+           <div class="menu-wrap">
+             <ul class="menu-list">
+               <li class="menu-item  "><a href="{% url 'principal' %}" class="menu-link"><span class="primero"><i class="icon icon-home"></i></span>Inicio</a></li>
+               <li class="menu-item "><a href="{% url 'principal' %}" class="menu-link"><span class="segundo"><i class="icon icon-globe"></i></span>Nosotros</a></li>
+               <li class="menu-item "><a href="{% url 'satelital' %}" class="menu-link"><span class="tercero"><i class="icon icon-satelite"></i></span>Imágenes Satelitales</a></li>
+               <li class="menu-item "><a href="{% url 'modelos' %}" class="menu-link"><span class="cuarto"><i class="icon icon-align-right"></i></span>Modelos Numéricos</a></li>
+               <li class="menu-item "><a href="{% url 'principal' %}" class="menu-link"><span class="quinto"><i class="icon icon-align-right"></i></span>Estaciones</a></li>
+             </ul>
+           </div>
+         </nav>
+       </div>
+     </div>
+   </div>
+ </div>
+
+</header>
+</body>
+<script src="{% static 'satelital/js/movimiento.js' %}"></script>
+<BODY onload="launch();MM_preloadImages('atras24_1.gif','stop24_1.gif','play24_1.gif','adelante24_1.gif','menos24_1.gif','mas24_1.gif')" bgcolor="#FFFFFF">
+<TABLE width=450 border=0 align=center>
+  <TR width=750>
+    <TD width=50 bgcolor=white>
+       <table border="1" width="100%">
+        <tr>
+          <td width="100%" align="center">
+       <a href="Javascript: func() " onClick="decrementImage(++current_image)"  onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage("{% static 'adelante24' %}",'',"{% static 'satelital/img/adelante24_1.gif' %}",1);" ><img name="adelante24" src="{% static 'satelital/img/adelante24.gif' %}" width="24" height="24" border="0" alt="Avanza 1 imagen"></a></td>
+        </tr>
+        <tr>
+          <td width="100%" align="center">
+     <a href="Javascript: func() " onClick="stop()"                           onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('stop24','',"{% static 'satelital/img/stop24_1.gif' %}",1);" ><img name="stop24" src="{% static 'satelital/img/stop24.gif' %}" width="24" height="24" border="0" alt="Stop"></a></td>
+        </tr>
+        <tr>
+          <td width="100%" align="center">
+     <a href="Javascript: func() " onClick="change_mode(1);fwd()"             onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('play24','',"{% static 'satelital/img/play24_1.gif' %}",1);" ><img name="play24" src="{% static 'satelital/img/play24.gif' %}" width="24" height="24" border="0" alt="Play"></a></td>
+        </tr>
+        <tr>
+          <td width="100%" align="center">
+     <a href="Javascript: func() " onClick="incrementImage(--current_image)"  onMouseOut="MM_swapImgRestore()"  onMouseOver="MM_swapImage('atras24','',"{% static 'satelital/img/atras24_1.gif' %}",1);" ><img name="atras24" src="{% static 'satelital/img/atras24.gif' %}" width="24" height="24" border="0" alt="Retrocede 1 imagen"></a></td>
+        </tr>
+       </table>
+       <BR>
+
+
+    </TD>
+    <TD width=640 align="top">
+
+    <table width="50%" border="0" align="top" height="326">
+      <tr>
+      <td width="74%" height="338">
+        <div align="top"><img name="animation" src="."  width="800"  height="618"></div>
+        <div align="top"></div>
+      </td>
+    </tr>
+    </table>
+    </TD>
+    <TD width=50>
+    </TD>
+
+</TABLE>
+
+</body>
+</html>
